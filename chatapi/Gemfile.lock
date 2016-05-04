@@ -24,6 +24,10 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_model_serializers (0.10.0.rc5)
+      actionpack (>= 4.0)
+      activemodel (>= 4.0)
+      railties (>= 4.0)
     activejob (5.0.0.beta4)
       activesupport (= 5.0.0.beta4)
       globalid (>= 0.3.6)
@@ -41,6 +45,7 @@ GEM
     arel (7.0.0)
     builder (3.2.2)
     byebug (8.2.5)
+    coderay (1.1.1)
     concurrent-ruby (1.0.2)
     erubis (2.7.0)
     ffi (1.9.10)
@@ -64,6 +69,12 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     puma (3.4.0)
     rack (2.0.0.alpha)
       json
@@ -99,6 +110,8 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redis (3.2.2)
+    slop (3.6.0)
     spring (1.7.1)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -123,10 +136,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.0.rc4)
   byebug
   listen (~> 3.0.5)
+  pry-rails
   puma (~> 3.0)
   rails (>= 5.0.0.beta4, < 5.1)
+  redis (~> 3.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
