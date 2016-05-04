@@ -1,0 +1,8 @@
+{{input value=messageInput }}
+<button {{action "sendMessage"}}>
+  Send
+</button>
+
+{{#each messagesList as |message|}}
+  <p>{{message.msg}}</p>
+{{/each}}
